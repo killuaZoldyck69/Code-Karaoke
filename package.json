@@ -1,9 +1,17 @@
 {
-  "name": "error-sound-extension",
-  "displayName": "Error Sound Extension",
-  "description": "Plays sound when code errors are detected",
+  "name": "code-karaoke",
+  "displayName": "Code-Karaoke",
+  "description": "Plays different sounds based on error count with success notifications",
   "version": "1.0.0",
-  "publisher": "your-publisher-name",
+  "publisher": "Killua_Zoldyck",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/killuaZoldyck69/Code-Karaoke.git"
+  },
+  "bugs": {
+    "url": "https://github.com/killuaZoldyck69/Code-Karaoke/issues"
+  },
+  "homepage": "https://github.com/killuaZoldyck69/Code-Karaoke#readme",
   "engines": {
     "vscode": "^1.60.0"
   },
