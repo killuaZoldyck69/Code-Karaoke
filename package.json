@@ -1,0 +1,78 @@
+{
+  "name": "error-sound-extension",
+  "displayName": "Error Sound Extension",
+  "description": "Plays sound when code errors are detected",
+  "version": "1.0.0",
+  "publisher": "your-publisher-name",
+  "engines": {
+    "vscode": "^1.60.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "keywords": [
+    "error",
+    "sound",
+    "notification",
+    "audio",
+    "debugging"
+  ],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "errorSound.toggleAudioMethod",
+        "title": "Toggle Audio Method",
+        "category": "Error Sound"
+      },
+      {
+        "command": "errorSound.showAudioPanel",
+        "title": "Show Audio Panel",
+        "category": "Error Sound"
+      },
+      {
+        "command": "errorSound.testAudio",
+        "title": "Test Audio",
+        "category": "Error Sound"
+      }
+    ],
+    "configuration": {
+      "title": "Error Sound",
+      "properties": {
+        "errorSound.enabled": {
+          "type": "boolean",
+          "default": true,
+          "description": "Enable error sound notifications"
+        },
+        "errorSound.volume": {
+          "type": "number",
+          "default": 0.7,
+          "minimum": 0,
+          "maximum": 1,
+          "description": "Audio volume (0.0 to 1.0)"
+        },
+        "errorSound.useWebAudio": {
+          "type": "boolean",
+          "default": false,
+          "description": "Use web audio instead of native system audio"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.60.0",
+    "@types/node": "14.x",
+    "@typescript-eslint/eslint-plugin": "^5.1.0",
+    "@typescript-eslint/parser": "^5.1.0",
+    "eslint": "^8.1.0",
+    "typescript": "^4.4.4"
+  }
+}
